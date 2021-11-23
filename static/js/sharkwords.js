@@ -20,13 +20,21 @@ const numWrong = 0;
 // Loop over the chars in `word` and create divs.xww
 //
 const createDivsForChars = word => {
-  // Replace this with your code
+  // 
+  for (const letter of word){
+    const container = document.querySelector('#word-container')
+    container.insertAdjacentHTML('beforeend', `<div class="letter-box ${letter}"></div>`);
+  }
 };
 
 // Loop over each letter in the alphabet and generate a button
 // for each letter
 const generateLetterButtons = () => {
-  // Replace this with your code
+  for (const abc of ALPHABET){
+    const container = document.querySelector('#letter-buttons')
+    container.insertAdjacentHTML('beforeend', `<button>${abc}</button>`);
+  }
+  
 };
 
 // Set the `disabled` property of `buttonEl` to `true.
@@ -34,8 +42,13 @@ const generateLetterButtons = () => {
 // `buttonEl` is an `HTMLElement` object.
 //
 const disableLetterButton = buttonEl => {
-  // Replace this with your code
+  //buttonEl.disabled.true;
+  buttonEl.setAttribute('disabled', true);
+// use document query selector later after next lexture to figure out how to handle cursor clicks 
 };
+
+// element.setAttribute("style", "background-color: red;");
+// element.style.backgroundColor = "red";
 
 // This is a helper function we will use in the future
 // It should return `true` if `letter` is in the word
@@ -43,6 +56,7 @@ const disableLetterButton = buttonEl => {
 
 const isLetterInWord = letter => {
   // Replace this with your code
+
 };
 
 // This is like if __name__ == '__main__' in Python
@@ -57,9 +71,11 @@ const isLetterInWord = letter => {
 
   // call the function that makes an empty line for each letter in the word
   // Replace this line with the function call
+  createDivsForChars(word);
 
   // call the function that makes a button for each letter in the alphabet
   // Replace this line with the function call
+  generateLetterButtons()
 
   // in the next lab, you will be adding functionality to handle when
   // someone clicks on a letter
