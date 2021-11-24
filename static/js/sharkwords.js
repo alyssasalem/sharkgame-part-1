@@ -42,22 +42,22 @@ const generateLetterButtons = () => {
 // `buttonEl` is an `HTMLElement` object.
 //
 const disableLetterButton = buttonEl => {
-  //buttonEl.disabled.true;
   buttonEl.setAttribute('disabled', true);
 // use document query selector later after next lexture to figure out how to handle cursor clicks 
 };
 
-// element.setAttribute("style", "background-color: red;");
-// element.style.backgroundColor = "red";
 
 // This is a helper function we will use in the future
 // It should return `true` if `letter` is in the word
 // For now, you should test it out to make sure it works
 
 const isLetterInWord = letter => {
-  // Replace this with your code
+  
+  
 
 };
+
+// const isLetterInWord = letter => document.querySelector(`div.${letter}`) !== null;
 
 // This is like if __name__ == '__main__' in Python
 // It will be called when the file is run (because
